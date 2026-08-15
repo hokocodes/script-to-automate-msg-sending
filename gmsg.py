@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 csvInput = input("Enter the path to the CSV file: ")
 
 # Load CSV
-df = pd.read_csv(csvInput)
+df = pd.read_csv(csvInput.replace('"', ""))
 
 # Open Chrome
 driver = webdriver.Chrome()
